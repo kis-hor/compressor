@@ -1,4 +1,3 @@
-<!-- index.php -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,9 +11,10 @@
 <body>
     <div class="container">
         <h1>Upload and Compress Your Image</h1>
-        <form id="uploadForm" enctype="multipart/form-data">
-            <input type="file" name="image" id="image" accept="image/*">
-            <button type="submit">Compress Image</button>
+        <form action="compress.php" method="POST" enctype="multipart/form-data">
+            <label>Select Images:</label>
+            <input type="file" name="images[]" multiple>
+            <button type="submit">Compress</button>
         </form>
         <div id="result"></div>
     </div>
